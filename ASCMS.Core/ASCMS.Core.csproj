@@ -35,9 +35,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Domain\Account\" />
-    <Folder Include="Domain\Blog\" />
     <Folder Include="Domain\Log\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Domain\Account\Account.cs" />
+    <Compile Include="Domain\Account\AccountRole.cs" />
+    <Compile Include="Domain\Blog\BlogComment.cs" />
+    <Compile Include="Domain\Blog\BlogPost.cs" />
+    <Compile Include="Domain\Blog\BlogPostTag.cs" />
+    <Compile Include="Domain\Content\Module.cs" />
+    <Compile Include="Domain\Content\ModuleType.cs" />
+    <Compile Include="Domain\Content\Page.cs" />
+    <Compile Include="Domain\Content\PageRow.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
