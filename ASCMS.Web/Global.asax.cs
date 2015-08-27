@@ -11,7 +11,6 @@ namespace ASCMS.Web
 {
     public class MvcApplication : System.Web.HttpApplication
     {
-        //ShadeTestBranch
         protected void Application_Start()
         {
             Database.SetInitializer<EFDbContext>(new ContextInitializer());
