@@ -23,7 +23,6 @@ namespace ASCMS.Domain.Domain.Content
 
         public virtual ICollection<PageRow> PageRows
         {
-            
             get { return _pageRows ?? (_pageRows = new List<PageRow>()); }
             protected set { _pageRows = value; }
         }
