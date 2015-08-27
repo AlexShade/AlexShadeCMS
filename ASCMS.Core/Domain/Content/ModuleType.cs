@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace ASCMS.Domain.Domain.Content
 {
-    class ModuleType
+    public enum ModuleType
     {
+        EmptyModule = 1,
+        HMLModule = 10,
+        MenuModule = 20
     }
 }
