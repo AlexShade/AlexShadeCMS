@@ -20,16 +20,22 @@ namespace ASCMS.Domain.Data
             
             PageRow NewPageRow = new PageRow();
 
-            Module NewModule = new Module();
-            NewModule.ModuleType = ModuleType.EmptyModule;
-            NewModule.ModuleWidth = 1;
-            
-            NewPageRow.RowModules.Add(NewModule);
+            Module EmptyModule = new Module();
+            EmptyModule.ModuleType = ModuleType.EmptyModule;
+            EmptyModule.ModuleWidth = 1;
+
+            Module HtmlModule = new Module();
+            HtmlModule.ModuleType = ModuleType.HMLModule;
+            HtmlModule.ModuleWidth = 1;
+
+            NewPageRow.RowModules.Add(EmptyModule);
+            NewPageRow.RowModules.Add(HtmlModule);
             NewPage.PageRows.Add(NewPageRow);
 
             context.Pages.Add(NewPage);
             context.PageRows.Add(NewPageRow);
-            context.Modules.Add(NewModule);
+            context.Modules.Add(EmptyModule);
+            context.Modules.Add(HtmlModule);
             context.SaveChanges();
         }
     }

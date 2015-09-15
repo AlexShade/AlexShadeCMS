@@ -20,5 +20,10 @@ namespace ASCMS.Web.Controllers
 
             return View(ResPage);
         }
+
+        public PartialViewResult PageModule(Module pm)
+        {
+            return PartialView(pm);
+        }
     }
 }

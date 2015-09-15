@@ -1,4 +1,5 @@
 ﻿@model ASCMS.Domain.Domain.Content.Page
+@using ASCMS.Domain.Domain.Content
 @{
     Layout = null;
 }
@@ -11,8 +12,12 @@
     <title>Index</title>
 </head>
 <body>
-    <div> 
-
-    </div>
+    @foreach (PageRow pr in Model.PageRows)
+    {
+        foreach (Module pm in pr.RowModules)
+        {
+            @Html.Action("PageModule", pm);
+        }
+    }
 </body>
 </html>
