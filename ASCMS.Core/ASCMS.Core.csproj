@@ -49,6 +49,9 @@
     <Compile Include="Domain\Blog\BlogComment.cs" />
     <Compile Include="Domain\Blog\BlogPost.cs" />
     <Compile Include="Domain\Blog\BlogPostTag.cs" />
+    <Compile Include="Domain\Content\EmptyModule.cs" />
+    <Compile Include="Domain\Content\HtmlModule.cs" />
+    <Compile Include="Domain\Content\MenuModule.cs" />
     <Compile Include="Domain\Content\Module.cs" />
     <Compile Include="Domain\Content\ModuleType.cs" />
     <Compile Include="Domain\Content\Page.cs" />

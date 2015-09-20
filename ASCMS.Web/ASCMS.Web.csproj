@@ -131,6 +131,9 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Page\PageModule.cshtml" />
+    <Content Include="Views\Page\_HTMLModule.cshtml" />
+    <Content Include="Views\Page\_EmptyModule.cshtml" />
+    <Content Include="Views\Page\_MenuModule.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -9,7 +9,10 @@ namespace ASCMS.Domain.Data
         public DbSet<Page> Pages { get; set; }
         public DbSet<PageRow> PageRows { get; set; }
         public DbSet<Module> Modules { get; set; }
-        //public DbSet<ModuleType> ModuleTypes { get; set; }
+
+        public DbSet<MenuModule> MenuModules { get; set; }
+        public DbSet<EmptyModule> EmptyModules { get; set; }
+        public DbSet<HtmlModule> HtmlModules { get; set; }
         
         public EFDbContext()
         {

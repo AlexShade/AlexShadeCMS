@@ -23,7 +23,23 @@ namespace ASCMS.Web.Controllers
 
         public PartialViewResult PageModule(Module pm)
         {
-            return PartialView(pm);
+            if (pm.ModuleType == ModuleType.HMLModule)
+            {
+                HtmlModule model = (HtmlModule)pm.GetModuleBody(pm.ModuleType);
+                return PartialView("_HTMLModule", model);
+            }
+            else if (pm.ModuleType == ModuleType.EmptyModule)
+            {
+                EmptyModule model = (EmptyModule)pm.GetModuleBody(pm.ModuleType);
+                return PartialView("_EmptyModule", model);
+            }
+            else if (pm.ModuleType == ModuleType.MenuModule)
+            {
+                MenuModule model = (MenuModule)pm.GetModuleBody(pm.ModuleType);
+                return PartialView("_MenuModule", model);
+            }
+            else
+                return PartialView("_EmptyModule");
         }
     }
 }

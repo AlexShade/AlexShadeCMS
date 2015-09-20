@@ -28,14 +28,28 @@ namespace ASCMS.Domain.Data
             HtmlModule.ModuleType = ModuleType.HMLModule;
             HtmlModule.ModuleWidth = 1;
 
+            HtmlModule htm = new Domain.Content.HtmlModule();
+            htm.HTMLText = "boo";
+            htm.ParentModule = HtmlModule;
+            //HtmlModule.ModuleBody = IModule(htm);
+
+            Module MenuModule = new Module();
+            MenuModule.ModuleType = ModuleType.MenuModule;
+            MenuModule.ModuleWidth = 1;
+
             NewPageRow.RowModules.Add(EmptyModule);
             NewPageRow.RowModules.Add(HtmlModule);
+            NewPageRow.RowModules.Add(MenuModule);
             NewPage.PageRows.Add(NewPageRow);
 
             context.Pages.Add(NewPage);
             context.PageRows.Add(NewPageRow);
             context.Modules.Add(EmptyModule);
             context.Modules.Add(HtmlModule);
+            context.Modules.Add(MenuModule);
+
+            context.HtmlModules.Add(htm);
+            
             context.SaveChanges();
         }
     }
